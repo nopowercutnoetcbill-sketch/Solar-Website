@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Power Installation Services | No Power Cut</title>
+    <title>Solar Power Installation & Instant Quotation | No Power Cut</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-emerald: #04432c;
             --accent-gold: #d4af37;
             --light-bg: #f4f8f5;
-            --text-dark: #333333;
+            --text-dark: #222222;
             --white: #ffffff;
+            --gray-border: #e0e0e0;
         }
 
         * {
@@ -33,35 +34,34 @@
         header {
             background: linear-gradient(135deg, var(--primary-emerald), #022618);
             color: var(--white);
-            padding: 2.5rem 1rem;
+            padding: 3.5rem 1rem;
             text-align: center;
-            border-bottom: 4px solid var(--accent-gold);
+            border-bottom: 5px solid var(--accent-gold);
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: var(--accent-gold);
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
 
         header p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             opacity: 0.95;
-            letter-spacing: 0.5px;
         }
 
         .container {
             max-width: 1100px;
             margin: auto;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: var(--primary-emerald);
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             font-weight: 700;
         }
 
@@ -69,199 +69,122 @@
             color: var(--accent-gold);
         }
 
-        .about, .services, .warranty, .contact {
+        .card-section {
             background: var(--white);
             padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            margin-bottom: 2.5rem;
         }
 
-        .services-grid {
+        /* Quotation Form Calculator */
+        .calculator-box {
+            background: #f8faf8;
+            border: 2px solid var(--accent-gold);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--primary-emerald);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group select, .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--gray-border);
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .quote-result {
+            display: none;
+            background: var(--primary-emerald);
+            color: var(--white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            border-left: 6px solid var(--accent-gold);
+        }
+
+        .quote-result h3 {
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Pricing Table */
+        .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
-            margin-top: 1.5rem;
         }
 
-        .service-card {
+        .price-card {
             background: var(--light-bg);
-            border-left: 5px solid var(--accent-gold);
-            padding: 1.5rem;
-            border-radius: 6px;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-card h3 {
-            color: var(--primary-emerald);
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .warranty-box {
-            background: linear-gradient(135deg, var(--primary-emerald), #065c3e);
-            color: var(--white);
-            padding: 2rem;
+            border: 1px solid var(--gray-border);
+            border-top: 5px solid var(--primary-emerald);
+            padding: 1.8rem;
             border-radius: 8px;
             text-align: center;
-            border: 2px solid var(--accent-gold);
+            transition: 0.3s;
         }
 
-        .warranty-box h3 {
-            color: var(--accent-gold);
+        .price-card.popular {
+            border-top-color: var(--accent-gold);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+        }
+
+        .price-card h3 {
+            color: var(--primary-emerald);
+            font-size: 1.4rem;
+        }
+
+        .price-card .price {
             font-size: 1.8rem;
-            margin-bottom: 1rem;
             font-weight: 700;
+            color: var(--primary-emerald);
+            margin: 1rem 0;
         }
 
-        .contact-info {
+        .price-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-card ul li {
+            padding: 0.4rem 0;
+            border-bottom: 1px dashed var(--gray-border);
+            font-size: 0.95rem;
+        }
+
+        .price-card ul li i {
+            color: var(--accent-gold);
+            margin-right: 8px;
+        }
+
+        /* Gallery */
+        .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            gap: 1.2rem;
         }
 
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        .contact-item i {
-            color: var(--accent-gold);
-            font-size: 1.5rem;
-            margin-top: 0.2rem;
-        }
-
-        .contact-item h4 {
-            color: var(--primary-emerald);
-            margin-bottom: 0.2rem;
-        }
-
-        .btn-whatsapp {
-            display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            transition: background 0.3s;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
-        }
-
-        footer {
-            background-color: var(--primary-emerald);
-            color: var(--white);
-            text-align: center;
-            padding: 1.5rem;
-            border-top: 3px solid var(--accent-gold);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 1.8rem; }
-            .container { padding: 1rem 0.5rem; }
-            .about, .services, .warranty, .contact { padding: 1.5rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Solar Power Systems & Services</h1>
-        <p>No Power Cut, No Electricity Bill – Sustainable & Reliable Energy Solutions</p>
-    </header>
-
-    <div class="container">
-
-        <!-- About Section -->
-        <section class="about">
-            <h2 class="section-title">About <span>Our Business</span></h2>
-            <p style="text-align: center; max-width: 800px; margin: auto;">
-                We specialize in high-quality solar power system installations, engineering estimates, and comprehensive technical solutions for residential, commercial, and industrial clients. Enjoy uninterrupted power supply and drastically reduce your electricity expenses with our expert services.
-            </p>
-        </section>
-
-        <!-- Services Section -->
-        <section class="services">
-            <h2 class="section-title">Our <span>System Offerings</span></h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3><i class="fa-solid fa-plug-circle-bolt" style="color: var(--accent-gold);"></i> On-Grid Systems</h3>
-                    <p>Connect directly to the national grid to drastically lower or completely eliminate your monthly electricity bills through net metering.</p>
-                </div>
-                <div class="service-card">
-                    <h3><i class="fa-solid fa-battery-full" style="color: var(--accent-gold);"></i> Off-Grid Systems</h3>
-                    <p>Ideal for off-grid locations or total independence from the national grid, providing 100% self-sustained renewable power.</p>
-                </div>
-                <div class="service-card">
-                    <h3><i class="fa-solid fa-bolt-lightning" style="color: var(--accent-gold);"></i> Hybrid Systems</h3>
-                    <p>Combine grid connections with battery backups to ensure continuous power supply even during unexpected power outages.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Warranty Section -->
-        <section class="warranty">
-            <div class="warranty-box">
-                <h3>Trusted 10-Year Replacement Warranty</h3>
-                <p style="font-size: 1.2rem; margin-bottom: 1rem;">
-                    We offer a comprehensive <strong>10-Year Replacement Warranty</strong> for all Inverters and Battery Systems.
-                </p>
-                <p>We ensure premium quality standards and long-lasting performance for all installed solar power hardware.</p>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact">
-            <h2 class="section-title">Contact <span>Us</span></h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <h4>Warakapola Office</h4>
-                        <p>No.166, Railway Station Road, Warakapola, Sri Lanka.</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <h4>Kadawatha Office</h4>
-                        <p>No.163, Ragama Road, Kadawatha, Sri Lanka.</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div>
-                        <h4>Email Address</h4>
-                        <p>nopowercut@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center;">
-                <a href="https://wa.me/+94773576129" class="btn-whatsapp" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-                </a>
-            </div>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Solar Power Systems & Services. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object
