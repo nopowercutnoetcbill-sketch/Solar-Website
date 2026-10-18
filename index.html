@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Power Installation & Instant Quotation | No Power Cut</title>
+    <title>No Power Cut, No Electricity Bill | Solar Energy Solutions</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -34,21 +34,52 @@
         header {
             background: linear-gradient(135deg, var(--primary-emerald), #022618);
             color: var(--white);
-            padding: 3.5rem 1rem;
+            padding: 2.5rem 1rem;
             text-align: center;
             border-bottom: 5px solid var(--accent-gold);
+        }
+
+        .logo-container img {
+            max-width: 180px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid var(--accent-gold);
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
         header h1 {
             font-size: 2.8rem;
             color: var(--accent-gold);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
             font-weight: 700;
         }
 
         header p {
             font-size: 1.2rem;
             opacity: 0.95;
+            font-weight: 500;
+        }
+
+        /* Banner Stats */
+        .stats-banner {
+            background: linear-gradient(135deg, var(--accent-gold), #b89228);
+            color: var(--primary-emerald);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-weight: 700;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.05rem;
         }
 
         .container {
@@ -77,12 +108,125 @@
             margin-bottom: 2.5rem;
         }
 
-        /* Quotation Form Calculator */
-        .calculator-box {
+        /* Banner Highlight */
+        .highlight-banner {
+            background: linear-gradient(135deg, #fff3cd, #ffe8a1);
+            border-left: 6px solid var(--accent-gold);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .highlight-banner h3 {
+            color: var(--primary-emerald);
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-box {
+            background: var(--light-bg);
+            border-top: 4px solid var(--primary-emerald);
+            padding: 1.8rem;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-box i {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .feature-box h3 {
+            color: var(--primary-emerald);
+            margin-bottom: 0.8rem;
+        }
+
+        /* Brands Styling */
+        .brand-category {
+            margin-bottom: 1.5rem;
+        }
+
+        .brand-category h4 {
+            color: var(--primary-emerald);
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 2px solid var(--accent-gold);
+            display: inline-block;
+            padding-bottom: 0.2rem;
+        }
+
+        .brand-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .brand-badge {
+            background: var(--light-bg);
+            border: 1px solid var(--gray-border);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--primary-emerald);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .brand-badge i {
+            color: var(--accent-gold);
+        }
+
+        /* Calculator Styles */
+        .calc-container {
             background: #f8faf8;
             border: 2px solid var(--accent-gold);
             padding: 2rem;
             border-radius: 10px;
+        }
+
+        .calc-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 0.8rem;
+            background: #e0e0e0;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .tab-btn.active {
+            background: var(--primary-emerald);
+            color: var(--white);
+        }
+
+        .calc-content {
+            display: none;
+        }
+
+        .calc-content.active {
+            display: block;
         }
 
         .form-group {
@@ -104,6 +248,27 @@
             font-size: 1rem;
         }
 
+        .appliance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .appliance-item {
+            background: var(--white);
+            padding: 1rem;
+            border: 1px solid var(--gray-border);
+            border-radius: 6px;
+        }
+
+        .appliance-item label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
         .quote-result {
             display: none;
             background: var(--primary-emerald);
@@ -119,72 +284,391 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Pricing Table */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .price-card {
-            background: var(--light-bg);
-            border: 1px solid var(--gray-border);
-            border-top: 5px solid var(--primary-emerald);
-            padding: 1.8rem;
-            border-radius: 8px;
-            text-align: center;
+        /* Buttons */
+        .btn-calc {
+            background: var(--primary-emerald);
+            color: white;
+            border: none;
+            padding: 0.9rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
             transition: 0.3s;
         }
 
-        .price-card.popular {
-            border-top-color: var(--accent-gold);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+        .btn-calc:hover {
+            background: #022618;
         }
 
-        .price-card h3 {
-            color: var(--primary-emerald);
-            font-size: 1.4rem;
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: #25d366;
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
         }
 
-        .price-card .price {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-emerald);
-            margin: 1rem 0;
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
         }
 
-        .price-card ul {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 1.5rem;
+        .btn-call {
+            display: inline-block;
+            background-color: var(--primary-emerald);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
         }
 
-        .price-card ul li {
-            padding: 0.4rem 0;
-            border-bottom: 1px dashed var(--gray-border);
-            font-size: 0.95rem;
-        }
-
-        .price-card ul li i {
-            color: var(--accent-gold);
-            margin-right: 8px;
-        }
-
-        /* Gallery */
-        .gallery-grid {
+        .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
-        .gallery-item {
-            position: relative;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
         }
 
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object
+        .contact-item i {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background-color: var(--primary-emerald);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 4px solid var(--accent-gold);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .container { padding: 1rem 0.5rem; }
+            .card-section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="No Power Cut Solar Logo" onerror="this.style.display='none'">
+        </div>
+        <h1>NO POWER CUT, NO ETC BILL</h1>
+        <p>Solar Energy Solutions & Engineering Excellence</p>
+    </header>
+
+    <!-- Highlighted Stats Bar -->
+    <div class="stats-banner">
+        <div class="stat-item"><i class="fa-solid fa-award"></i> 13 Years Experience</div>
+        <div class="stat-item"><i class="fa-solid fa-solar-panel"></i> 30 Years Panel Warranty</div>
+        <div class="stat-item"><i class="fa-solid fa-arrows-rotate"></i> 10 Years 1 to 1 Replacement Warranty (Inverter & Battery)</div>
+    </div>
+
+    <div class="container">
+
+        <!-- Zero Advance Payment Guarantee -->
+        <div class="highlight-banner">
+            <h3><i class="fa-solid fa-shield-halved"></i> 100% Trust Guarantee: NO ADVANCE PAYMENT REQUIRED!</h3>
+            <p>We charge <strong>zero advance payments</strong> until your solar power system is fully installed, commissioned, and operational.</p>
+        </div>
+
+        <!-- Solar Systems Explanation -->
+        <section class="card-section">
+            <h2 class="section-title">Our Comprehensive <span>Solar Systems</span></h2>
+            <div class="grid-3">
+                <div class="feature-box">
+                    <i class="fa-solid fa-plug-circle-bolt"></i>
+                    <h3>On-Grid Solar System</h3>
+                    <p>Connects directly to the CEB/LECO national grid via Net Metering / Net Accounting. Ideal for drastically cutting or eliminating monthly electricity bills with high ROI.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-battery-full"></i>
+                    <h3>Off-Grid Solar System</h3>
+                    <p>Delivers total independence from the national grid using high-capacity battery storage. Provides continuous 100% self-sustained renewable power.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                    <h3>Hybrid Solar System</h3>
+                    <p>The ultimate solution combining net-metered grid connectivity with smart lithium battery backups. Ensures zero power cuts during grid blackouts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- World's Renowned Brands -->
+        <section class="card-section">
+            <h2 class="section-title">World-Renowned <span>Tier-1 Brands</span></h2>
+            <p style="text-align: center; margin-bottom: 1.5rem;">We exclusively install internationally certified, premium-grade solar components from global leaders.</p>
+            
+            <div class="brand-category">
+                <h4>Inverters & Battery Systems</h4>
+                <div class="brand-badges">
+                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Deye</span>
+                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Solis</span>
+                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Solax</span>
+                    <span class="brand-badge"><i class="fa-solid fa-check"></i> GoodWe</span>
+                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Sungrow</span>
+                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Sunways</span>
+                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Maxmo</span>
+                </div>
+            </div>
+
+            <div class="brand-category" style="margin-top: 1.5rem;">
+                <h4>High Efficiency Solar Panels</h4>
+                <div class="brand-badges">
+                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Jinko Solar</span>
+                    <span class="brand-badge"><i class="fa-solid fa-check"></i> JA Solar</span>
+                    <span class="brand-badge"><i class="fa-solid fa-check"></i> AE Solar</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Calculator & Instant Quotation -->
+        <section class="card-section">
+            <h2 class="section-title">Get Instant <span>Solar Quotation</span></h2>
+            <div class="calc-container">
+                
+                <div class="calc-tabs">
+                    <button class="tab-btn active" onclick="switchTab('billTab')">Select by Monthly Bill</button>
+                    <button class="tab-btn" onclick="switchTab('applianceTab')">Select by Appliances</button>
+                </div>
+
+                <!-- Option 1: Monthly Bill -->
+                <div id="billTab" class="calc-content active">
+                    <div class="form-group">
+                        <label for="monthlyBill">Average Monthly Electricity Bill (LKR):</label>
+                        <select id="monthlyBill">
+                            <option value="">-- Choose Monthly Bill Range --</option>
+                            <option value="3kw">Rs. 15,000 - Rs. 35,000 (Approx. 3 kW System)</option>
+                            <option value="5kw">Rs. 35,000 - Rs. 70,000 (Approx. 5 kW System)</option>
+                            <option value="10kw">Rs. 70,000 - Rs. 150,000 (Approx. 10 kW System)</option>
+                            <option value="15kw">Above Rs. 150,000 (Commercial Custom Setup)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Option 2: Appliances -->
+                <div id="applianceTab" class="calc-content">
+                    <p style="font-weight: 600; color: var(--primary-emerald); margin-bottom: 1rem;">Select appliances used at your home or business premises:</p>
+                    <div class="appliance-grid">
+                        <div class="appliance-item">
+                            <label for="appAC">Air Conditioners (12000 BTU):</label>
+                            <input type="number" id="appAC" min="0" value="0">
+                        </div>
+                        <div class="appliance-item">
+                            <label for="appFridge">Refrigerators / Deep Freezers:</label>
+                            <input type="number" id="appFridge" min="0" value="0">
+                        </div>
+                        <div class="appliance-item">
+                            <label for="appPump">Water Pump / Pressure Pump:</label>
+                            <input type="number" id="appPump" min="0" value="0">
+                        </div>
+                        <div class="appliance-item">
+                            <label for="appTV">LED TVs / Computers:</label>
+                            <input type="number" id="appTV" min="0" value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="systemType">Preferred System Type:</label>
+                    <select id="systemType">
+                        <option value="On-Grid">On-Grid System (Net Metering / Accounting)</option>
+                        <option value="Hybrid">Hybrid System (Grid + Battery Outage Backup)</option>
+                        <option value="Off-Grid">Off-Grid System (100% Battery Independent)</option>
+                    </select>
+                </div>
+
+                <button class="btn-calc" onclick="generateQuotation()">Generate Instant Quotation</button>
+
+                <div id="quoteResult" class="quote-result">
+                    <h3>Your Customized Solar Quotation</h3>
+                    <p id="resCapacity"><strong>Recommended Capacity:</strong> -</p>
+                    <p id="resPrice"><strong>Estimated Investment:</strong> -</p>
+                    <div style="margin-top: 0.8rem; font-size: 0.95rem;">
+                        <p><i class="fa-solid fa-shield-check" style="color: var(--accent-gold);"></i> <strong>NO ADVANCE PAYMENT required</strong> until full completion.</p>
+                        <p><i class="fa-solid fa-gift" style="color: var(--accent-gold);"></i> <strong>1st Year FREE Full Insurance Coverage included.</strong></p>
+                        <p><i class="fa-solid fa-wrench" style="color: var(--accent-gold);"></i> <strong>3 FREE Maintenance & Servicing visits</strong> during first 5 years.</p>
+                        <p><i class="fa-solid fa-certificate" style="color: var(--accent-gold);"></i> <strong>10 Years 1 to 1 Replacement Warranty</strong> for Inverter & Battery.</p>
+                    </div>
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <a id="waQuoteLink" href="#" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Send Quotation to WhatsApp for Inspection</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Trust, Warranty & After-Sales Benefits -->
+        <section class="card-section">
+            <h2 class="section-title">Why Choose <span>Our Company?</span></h2>
+            <div class="grid-3">
+                <div class="feature-box">
+                    <i class="fa-solid fa-award"></i>
+                    <h3>13 Years Experience</h3>
+                    <p>Backed by over 13 years of engineering experience in technical solutions and solar power engineering.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>1st Year Free Insurance</h3>
+                    <p>Enjoy complete financial protection with <strong>100% FREE Insurance Coverage</strong> for your system during the first year.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>5-Year Free Maintenance</h3>
+                    <p>Includes <strong>3 FREE comprehensive servicing and preventive maintenance visits</strong> within the first 5 years.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-rotate"></i>
+                    <h3>1 to 1 Replacement Warranty</h3>
+                    <p><strong>10-Year 1 to 1 Replacement Warranty</strong> for Inverter & Battery systems + 30-Year Solar Panel Warranty.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h3>Zero Advance Payment</h3>
+                    <p>No upfront deposit or advance payment required. Settle payments only after successful installation and testing.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>Dedicated After-Sales Care</h3>
+                    <p>Lifetime customer support and technical backup team ensuring high system uptime and maximum power output.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Branch Network & Contact Details -->
+        <section class="card-section">
+            <h2 class="section-title">Contact <span>Branch Network</span></h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Head Office (Warakapola)</h4>
+                        <p>No.166, Railway Station Road, Warakapola, Sri Lanka.</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Kadawatha Branch</h4>
+                        <p>No.163, Ragama Road, Kadawatha, Sri Lanka.</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Direct Hotline & WhatsApp</h4>
+                        <p>+94 71 114 3289</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email Address</h4>
+                        <p>nopowercut@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/+94711143289" class="btn-whatsapp" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (+94 71 114 3289)
+                </a>
+                <a href="tel:+94711143289" class="btn-call">
+                    <i class="fa-solid fa-phone"></i> Direct Call (+94 71 114 3289)
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Solar Energy Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        var activeTabMode = "bill";
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.calc-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+
+            activeTabMode = (tabId === "billTab") ? "bill" : "appliance";
+        }
+
+        function generateQuotation() {
+            var sysType = document.getElementById("systemType").value;
+            var capText = "";
+            var priceText = "";
+
+            if (activeTabMode === "bill") {
+                var bill = document.getElementById("monthlyBill").value;
+                if (!bill) {
+                    alert("Please select a monthly bill range.");
+                    return;
+                }
+                if (bill === "3kw") {
+                    capText = "3 kW System (~360-400 Units/month)";
+                    priceText = (sysType === "Hybrid") ? "LKR 1,250,000 - 1,450,000" : "LKR 850,000 - 980,000";
+                } else if (bill === "5kw") {
+                    capText = "5 kW System (~600-680 Units/month)";
+                    priceText = (sysType === "Hybrid") ? "LKR 1,650,000 - 1,950,000" : "LKR 1,350,000 - 1,500,000";
+                } else if (bill === "10kw") {
+                    capText = "10 kW System (~1,200+ Units/month)";
+                    priceText = (sysType === "Hybrid") ? "LKR 3,400,000 - 3,900,000" : "LKR 2,750,000 - 3,200,000";
+                } else {
+                    capText = "15+ kW Commercial System";
+                    priceText = "Custom quotation based on site inspection";
+                }
+            } else {
+                var ac = parseInt(document.getElementById("appAC").value) || 0;
+                var fridge = parseInt(document.getElementById("appFridge").value) || 0;
+                var pump = parseInt(document.getElementById("appPump").value) || 0;
+                var tv = parseInt(document.getElementById("appTV").value) || 0;
+
+                var estimatedkW = (ac * 1.5) + (fridge * 0.5) + (pump * 1.0) + (tv * 0.2);
+                if (estimatedkW <= 0) {
+                    alert("Please enter at least 1 appliance quantity.");
+                    return;
+                }
+
+                if (estimatedkW <= 3.5) {
+                    capText = "3 kW System (Based on selected appliances)";
+                    priceText = (sysType === "Hybrid") ? "LKR 1,250,000 - 1,450,000" : "LKR 850,000 - 980,000";
+                } else if (estimatedkW <= 6.5) {
+                    capText = "5 kW System (Based on selected appliances)";
+                    priceText = (sysType === "Hybrid") ? "LKR 1,650,000 - 1,950,000" : "LKR 1,350,000 - 1,500,000";
+                } else {
+                    capText = "10 kW System (Based on selected appliances)";
+                    priceText = (sysType === "Hybrid") ? "LKR 3,400,000 - 3,900,000" : "LKR 2,750,000 - 3,200,000";
+                }
+            }
+
+            document.getElementById("resCapacity").innerHTML = "<strong>Recommended Capacity:</strong> " + capText + " (" + sysType + ")";
+            document.getElementById("resPrice").innerHTML = "<strong>Estimated Investment:</strong> " + priceText;
+
+            var waMsg = "Hello, I created a quotation on your website:%0A- System: " + capText + "%0A- System Type: " + sysType + "%0A- Estimated Investment: " + priceText + "%0A- Included: Zero Advance Payment, 1st Year Free Insurance, 3 Free Servicing Visits, 10 Years Replacement Warranty.%0APlease contact me for a site visit.";
+            document.getElementById("waQuoteLink").href = "https://wa.me/+94711143289?text=" + waMsg;
+
+            document.getElementById("quoteResult").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
