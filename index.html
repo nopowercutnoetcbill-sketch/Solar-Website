@@ -1,674 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Power Cut, No Electricity Bill | Solar Energy Solutions</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-emerald: #04432c;
-            --accent-gold: #d4af37;
-            --light-bg: #f4f8f5;
-            --text-dark: #222222;
-            --white: #ffffff;
-            --gray-border: #e0e0e0;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b16">
+  <meta name="description" content="Explore solar energy solutions and estimate a system size for your home or business. Request a solar consultation.">
+  <title>NO POWER CUT, NO ETC BILL | Solar Energy Solutions</title>
+  <style>
+    :root{--ink:#10241d;--muted:#60716a;--green:#0f6b4d;--lime:#c8f169;--cream:#f6f8f2;--white:#fff;--line:#e0e8df;--dark:#071b16;--gold:#f6c95b;--shadow:0 18px 55px rgba(6,31,22,.12);--radius:24px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:#fff;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none} button,input,select{font:inherit} button,a{ -webkit-tap-highlight-color:transparent}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topline{background:var(--dark);color:#d6e6d9;font-size:.82rem;padding:9px 0}.topline .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,36,29,.08)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:-.04em;line-height:1.1}.brandmark{width:42px;height:42px;border-radius:14px;background:var(--green);display:grid;place-items:center;color:var(--lime);font-size:23px}.brand small{display:block;color:var(--muted);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:5px}
+    .navlinks{display:flex;align-items:center;gap:27px;font-size:.92rem;font-weight:650}.navlinks a:hover{color:var(--green)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:999px;font-weight:750;border:0;cursor:pointer;transition:transform .2s,background .2s}.nav-cta,.btn-primary{background:var(--lime);color:var(--dark)}.nav-cta:hover,.btn:hover{transform:translateY(-2px)}.menu-btn{display:none;border:1px solid var(--line);background:white;border-radius:12px;padding:9px 12px}
+    .hero{background:var(--dark);color:white;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:620px;height:620px;right:-110px;top:-230px;border-radius:50%;background:radial-gradient(circle,rgba(200,241,105,.19),rgba(15,107,77,.05) 56%,transparent 70%)}.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center;padding:82px 0 78px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--lime);text-transform:uppercase;letter-spacing:.15em;font-size:.75rem;font-weight:850}.eyebrow:before{content:"";width:25px;height:2px;background:currentColor}.hero h1{font-size:clamp(2.8rem,5.5vw,5.35rem);line-height:.99;letter-spacing:-.065em;margin:22px 0 24px;max-width:680px}.hero h1 em{font-style:normal;color:var(--lime)}.hero p{font-size:1.1rem;color:#c5d5cd;max-width:570px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 28px}.btn-outline{border:1px solid #53665e;color:white;background:transparent}.hero-note{display:flex;align-items:center;gap:10px;color:#b9ccc2;font-size:.88rem}.dot{width:9px;height:9px;background:var(--lime);border-radius:50%;box-shadow:0 0 0 5px rgba(200,241,105,.12)}
+    .hero-visual{position:relative;min-height:420px;display:flex;align-items:center;justify-content:center}.sun{position:absolute;width:230px;height:230px;right:12%;top:0;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff5c2,#e7b54a 55%,rgba(246,201,91,.08) 72%);filter:drop-shadow(0 0 55px rgba(246,201,91,.24))}.panel-scene{position:relative;z-index:1;width:100%;max-width:510px;margin-top:80px;transform:perspective(900px) rotateY(-8deg) rotateX(4deg)}.panel-roof{height:235px;padding:16px;border-radius:18px;background:linear-gradient(140deg,#193d39,#0b2725);border:1px solid #42615a;box-shadow:0 35px 70px rgba(0,0,0,.35);transform:skewY(-8deg)}.panels{height:100%;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(3,1fr);gap:6px}.panel{background:linear-gradient(135deg,#173e61,#246c8c 48%,#0e304c);border:1px solid rgba(174,230,240,.5);position:relative;overflow:hidden}.panel:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.13),transparent 58%)}.house{position:absolute;right:0;bottom:-30px;width:190px;height:125px;background:#e8eee1;clip-path:polygon(50% 0,100% 35%,100% 100%,0 100%,0 35%);z-index:2;filter:drop-shadow(0 10px 20px #0004)}.house:after{content:"";position:absolute;width:34px;height:55px;background:#8aa59a;left:78px;bottom:0}.floating-stat{position:absolute;z-index:3;background:rgba(255,255,255,.96);color:var(--ink);border:1px solid #fff;border-radius:18px;padding:15px 18px;box-shadow:var(--shadow)}.floating-stat strong{font-size:1.2rem;display:block;letter-spacing:-.03em}.floating-stat span{font-size:.75rem;color:var(--muted)}.stat-one{left:-5px;bottom:48px}.stat-two{right:-4px;top:75px}.mini-icon{display:inline-grid;place-items:center;width:30px;height:30px;background:#e8f6d1;border-radius:10px;margin-right:6px}
+    .trustbar{background:var(--cream);border-bottom:1px solid var(--line)}.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:22px 0;gap:20px}.trust-item{display:flex;align-items:center;justify-content:center;gap:12px;font-size:.92rem;font-weight:750}.trust-item b{font-size:1.4rem;color:var(--green)}
+    section{padding:88px 0}.section-head{max-width:680px;margin:0 auto 42px;text-align:center}.kicker{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:850}.section-head h2,.split-copy h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.08;letter-spacing:-.055em;margin:12px 0 15px}.section-head p,.split-copy p{color:var(--muted);font-size:1.02rem}
+    .systems{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.system-card{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;transition:transform .22s,box-shadow .22s}.system-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.system-icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:#eaf6d7;color:var(--green);font-size:1.5rem}.system-card h3{font-size:1.35rem;letter-spacing:-.035em;margin:20px 0 8px}.system-card p{color:var(--muted);font-size:.94rem}.system-card a{display:inline-flex;margin-top:10px;color:var(--green);font-weight:800;font-size:.9rem}.system-card a span{margin-left:7px}
+    .calculator-section{background:var(--cream)}.calc-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start}.calc-intro{position:sticky;top:120px}.calc-intro h2{font-size:clamp(2.2rem,4vw,3.5rem);line-height:1.03;letter-spacing:-.06em;margin:15px 0}.calc-intro p{color:var(--muted)}.calc-points{padding:0;list-style:none;margin:25px 0}.calc-points li{margin:13px 0;display:flex;gap:10px;align-items:flex-start}.check{width:23px;height:23px;flex:0 0 23px;border-radius:50%;display:grid;place-items:center;background:#dff1c0;color:#1d653e;font-weight:900}.calc-card{background:white;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow)}.calc-card h3{font-size:1.35rem;margin:0 0 5px;letter-spacing:-.03em}.subtext{font-size:.87rem;color:var(--muted);margin:0 0 24px}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;font-weight:800}.field input,.field select{width:100%;border:1px solid #d8e2d8;border-radius:12px;padding:13px 13px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field select:focus{border-color:var(--green);box-shadow:0 0 0 3px #0f6b4d17}.input-hint{font-size:.75rem;color:var(--muted)}.calc-submit{width:100%;margin-top:22px;padding:15px}.results{display:none;margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}.results.show{display:block}.result-top{background:var(--dark);color:white;padding:22px;border-radius:18px;display:flex;justify-content:space-between;gap:15px;align-items:center}.result-top small{color:#c6d8ce}.result-top strong{display:block;font-size:2.2rem;letter-spacing:-.05em;line-height:1.2}.result-top .pill{background:#d8f7a0;color:#17311e;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:850;white-space:nowrap}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.result-box{background:#f5f8f2;border-radius:14px;padding:15px}.result-box span{display:block;color:var(--muted);font-size:.78rem}.result-box strong{font-size:1.25rem;letter-spacing:-.03em}.disclaimer{font-size:.77rem;color:var(--muted);margin:14px 0 0}
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.feature-list{display:grid;gap:17px}.feature{display:flex;gap:15px;padding:18px;border:1px solid var(--line);border-radius:18px}.feature .system-icon{flex:0 0 48px;width:48px;height:48px}.feature h3{margin:0 0 4px;font-size:1.03rem}.feature p{margin:0;color:var(--muted);font-size:.9rem}.visual-card{background:linear-gradient(145deg,#eaf5d9,#f8fbf2);border-radius:30px;padding:28px;min-height:420px;position:relative;overflow:hidden}.visual-card h3{font-size:1.8rem;line-height:1.1;letter-spacing:-.05em;max-width:290px;margin:5px 0 20px}.energy-circle{width:250px;height:250px;border:1px solid #c0d7a4;border-radius:50%;display:grid;place-items:center;margin:15px auto 0;position:relative}.energy-circle:before,.energy-circle:after{content:"";position:absolute;border:1px dashed #a9c78b;border-radius:50%;inset:20px}.energy-circle:after{inset:45px}.energy-center{width:115px;height:115px;background:var(--green);color:white;border-radius:32px;display:grid;place-items:center;font-size:2.5rem;z-index:1;box-shadow:0 12px 30px #0f6b4d33}.orbit{position:absolute;z-index:2;background:#fff;border-radius:14px;padding:10px 12px;box-shadow:0 8px 25px #163b2416;font-size:.78rem;font-weight:800}.orbit.a{top:10px;left:20px}.orbit.b{right:0;top:95px}.orbit.c{bottom:10px;left:35px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:step}.step{border-top:2px solid var(--green);padding:22px 8px 0;counter-increment:step}.step:before{content:"0" counter(step);display:block;color:var(--green);font-weight:900;letter-spacing:.12em;font-size:.8rem}.step h3{font-size:1.2rem;margin:12px 0 5px}.step p{color:var(--muted);font-size:.92rem}
+    .cta{padding:0 0 88px}.cta-inner{background:var(--green);border-radius:30px;padding:45px 48px;display:flex;align-items:center;justify-content:space-between;gap:25px;color:white;position:relative;overflow:hidden}.cta-inner:after{content:"☀";position:absolute;font-size:210px;line-height:1;right:25%;top:-55px;color:#ffffff0d}.cta-inner h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.1;letter-spacing:-.05em;margin:0 0 10px;max-width:600px}.cta-inner p{margin:0;color:#d4e8dc}.cta-inner .btn{position:relative;z-index:1;white-space:nowrap}
+    footer{background:var(--dark);color:white;padding:55px 0 22px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:35px}.footer-brand p{max-width:370px;color:#b9cbc1;font-size:.92rem}.footer-col h4{margin:0 0 15px}.footer-col a,.footer-col p{display:block;color:#b9cbc1;font-size:.9rem;margin:8px 0}.footer-col a:hover{color:var(--lime)}.footer-bottom{border-top:1px solid #284038;padding-top:18px;color:#8fa69a;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.8rem}
+    .notice{background:#fff8df;color:#725d1b;border:1px solid #f1e4ae;border-radius:12px;padding:12px 14px;font-size:.82rem;margin-top:18px}
+    @media(max-width:900px){.navlinks{gap:15px}.hero-grid{gap:22px}.hero-visual{min-height:350px}.panel-roof{height:190px}.systems{grid-template-columns:1fr 1fr}.calc-layout{grid-template-columns:1fr;gap:25px}.calc-intro{position:static}.why-grid{gap:28px}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+    @media(max-width:650px){.wrap{width:min(100% - 30px,1160px)}.topline .wrap{justify-content:center;text-align:center}.nav{height:68px}.brand{font-size:.88rem}.brandmark{width:38px;height:38px}.menu-btn{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:68px;padding:18px 22px 22px;background:white;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:4px}.navlinks.open{display:flex}.navlinks a{padding:10px 4px}.nav-cta{margin-top:7px}.hero-grid{grid-template-columns:1fr;padding:55px 0 45px}.hero h1{font-size:clamp(2.7rem,13vw,4rem)}.hero-visual{min-height:290px;margin-top:8px}.sun{width:170px;height:170px;right:8%;top:-5px}.panel-scene{margin-top:48px;max-width:410px}.panel-roof{height:160px;padding:10px}.house{width:130px;height:90px;bottom:-20px}.house:after{width:25px;height:40px;left:53px}.stat-one{left:0;bottom:20px}.stat-two{right:0;top:35px}.floating-stat{padding:10px 12px}.floating-stat strong{font-size:1rem}.trust-grid{grid-template-columns:1fr;padding:16px 0;gap:10px}.trust-item{justify-content:flex-start}.trust-item b{width:28px;text-align:center}.trust-item span{font-size:.88rem}section{padding:62px 0}.section-head{margin-bottom:28px}.systems{grid-template-columns:1fr}.system-card{padding:23px}.calc-card{padding:20px}.field-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.result-top{align-items:flex-start;flex-direction:column}.why-grid{grid-template-columns:1fr}.visual-card{min-height:370px;padding:22px}.energy-circle{width:220px;height:220px}.energy-center{width:95px;height:95px}.steps{grid-template-columns:1fr;gap:10px}.step{padding:18px 4px 8px}.cta{padding-bottom:62px}.cta-inner{padding:30px 24px;align-items:flex-start;flex-direction:column}.cta-inner:after{right:0}.footer-grid{grid-template-columns:1fr;gap:24px}.footer-brand{grid-column:auto}.footer-bottom{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  
+    .packages-section{background:#f6f8f2}.package-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.package-card{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}.package-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#e8eee6}.package-body{padding:22px;display:flex;flex-direction:column;align-items:flex-start;flex:1}.package-price{font-size:1.8rem;font-weight:900;letter-spacing:-.04em;color:var(--green);margin:5px 0 12px}.package-card ul{padding-left:20px;color:var(--muted);margin:0 0 18px}.package-card li{margin:7px 0}.package-body .btn{margin-top:auto}.package-note{font-size:.82rem;color:var(--muted);margin-top:22px;padding:14px 16px;background:#fff;border-radius:14px;border:1px solid var(--line)}@media(max-width:760px){.package-grid{grid-template-columns:1fr}}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
 
-        body {
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-emerald), #022618);
-            color: var(--white);
-            padding: 2.5rem 1rem;
-            text-align: center;
-            border-bottom: 5px solid var(--accent-gold);
-        }
-
-        .logo-container img {
-            max-width: 180px;
-            height: auto;
-            border-radius: 50%;
-            border: 3px solid var(--accent-gold);
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            color: var(--accent-gold);
-            margin-bottom: 0.3rem;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            font-weight: 500;
-        }
-
-        /* Banner Stats */
-        .stats-banner {
-            background: linear-gradient(135deg, var(--accent-gold), #b89228);
-            color: var(--primary-emerald);
-            padding: 1rem;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 1rem;
-            font-weight: 700;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.05rem;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 2.5rem 1rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary-emerald);
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-
-        .section-title span {
-            color: var(--accent-gold);
-        }
-
-        .card-section {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-            margin-bottom: 2.5rem;
-        }
-
-        /* Banner Highlight */
-        .highlight-banner {
-            background: linear-gradient(135deg, #fff3cd, #ffe8a1);
-            border-left: 6px solid var(--accent-gold);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .highlight-banner h3 {
-            color: var(--primary-emerald);
-            font-size: 1.3rem;
-            margin-bottom: 0.3rem;
-        }
-
-        /* Grid Layouts */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .feature-box {
-            background: var(--light-bg);
-            border-top: 4px solid var(--primary-emerald);
-            padding: 1.8rem;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .feature-box:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-box i {
-            font-size: 2rem;
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-        }
-
-        .feature-box h3 {
-            color: var(--primary-emerald);
-            margin-bottom: 0.8rem;
-        }
-
-        /* Brands Styling */
-        .brand-category {
-            margin-bottom: 1.5rem;
-        }
-
-        .brand-category h4 {
-            color: var(--primary-emerald);
-            font-size: 1.1rem;
-            margin-bottom: 0.8rem;
-            border-bottom: 2px solid var(--accent-gold);
-            display: inline-block;
-            padding-bottom: 0.2rem;
-        }
-
-        .brand-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .brand-badge {
-            background: var(--light-bg);
-            border: 1px solid var(--gray-border);
-            padding: 0.6rem 1.2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            color: var(--primary-emerald);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-        }
-
-        .brand-badge i {
-            color: var(--accent-gold);
-        }
-
-        /* Calculator Styles */
-        .calc-container {
-            background: #f8faf8;
-            border: 2px solid var(--accent-gold);
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .calc-tabs {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tab-btn {
-            flex: 1;
-            padding: 0.8rem;
-            background: #e0e0e0;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .tab-btn.active {
-            background: var(--primary-emerald);
-            color: var(--white);
-        }
-
-        .calc-content {
-            display: none;
-        }
-
-        .calc-content.active {
-            display: block;
-        }
-
-        .form-group {
-            margin-bottom: 1.2rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            color: var(--primary-emerald);
-            margin-bottom: 0.5rem;
-        }
-
-        .form-group select, .form-group input {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid var(--gray-border);
-            border-radius: 6px;
-            font-size: 1rem;
-        }
-
-        .appliance-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .appliance-item {
-            background: var(--white);
-            padding: 1rem;
-            border: 1px solid var(--gray-border);
-            border-radius: 6px;
-        }
-
-        .appliance-item label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .quote-result {
-            display: none;
-            background: var(--primary-emerald);
-            color: var(--white);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 1.5rem;
-            border-left: 6px solid var(--accent-gold);
-        }
-
-        .quote-result h3 {
-            color: var(--accent-gold);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Buttons */
-        .btn-calc {
-            background: var(--primary-emerald);
-            color: white;
-            border: none;
-            padding: 0.9rem 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 6px;
-            cursor: pointer;
-            width: 100%;
-            transition: 0.3s;
-        }
-
-        .btn-calc:hover {
-            background: #022618;
-        }
-
-        .btn-whatsapp {
-            display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
-        }
-
-        .btn-call {
-            display: inline-block;
-            background-color: var(--primary-emerald);
-            color: white;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .contact-item i {
-            color: var(--accent-gold);
-            font-size: 1.5rem;
-        }
-
-        footer {
-            background-color: var(--primary-emerald);
-            color: var(--white);
-            text-align: center;
-            padding: 1.5rem;
-            border-top: 4px solid var(--accent-gold);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            .container { padding: 1rem 0.5rem; }
-            .card-section { padding: 1.5rem; }
-        }
-    </style>
+    .projects-section{background:#fff}.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.project-card{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 12px 35px rgba(6,31,22,.08)}.project-card img{width:100%;height:270px;display:block;object-fit:cover;background:#eef2ec}.project-body{padding:20px}.project-body h3{margin:0 0 8px;font-size:1.15rem;letter-spacing:-.03em}.project-body p{margin:0;color:var(--muted);font-size:.92rem}.project-tag{display:inline-block;margin-bottom:10px;border-radius:999px;background:#eaf6d7;color:var(--green);font-size:.72rem;font-weight:850;padding:6px 10px;text-transform:uppercase;letter-spacing:.06em}.project-note{margin-top:22px;padding:15px 18px;border-radius:14px;background:var(--cream);color:var(--muted);font-size:.84rem}@media(max-width:900px){.project-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.project-grid{grid-template-columns:1fr}.project-card img{height:auto;max-height:380px;object-fit:cover}}
+  </style>
 </head>
 <body>
-
-    <header>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="No Power Cut Solar Logo" onerror="this.style.display='none'">
-        </div>
-        <h1>NO POWER CUT, NO ETC BILL</h1>
-        <p>Solar Energy Solutions & Engineering Excellence</p>
-    </header>
-
-    <!-- Highlighted Stats Bar -->
-    <div class="stats-banner">
-        <div class="stat-item"><i class="fa-solid fa-award"></i> 13 Years Experience</div>
-        <div class="stat-item"><i class="fa-solid fa-solar-panel"></i> 30 Years Panel Warranty</div>
-        <div class="stat-item"><i class="fa-solid fa-arrows-rotate"></i> 10 Years 1 to 1 Replacement Warranty (Inverter & Battery)</div>
+  <div class="topline"><div class="wrap"><span>Smarter energy starts with the right solar solution.</span><span>Residential · Commercial · Solar consultation</span></div></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="NO POWER CUT, NO ETC BILL home"><span class="brandmark">☼</span><span>NO POWER CUT<small>NO ETC BILL · SOLAR ENERGY</small></span></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu ☰</button>
+      <nav class="navlinks" id="navLinks" aria-label="Main navigation">
+        <a href="#systems">Solar Systems</a><a href="#packages">Packages & Prices</a><a href="#projects">Our Projects</a><a href="#calculator">Calculator</a><a href="#why-us">Why Solar</a><a href="#process">How It Works</a><a class="nav-cta" href="#contact">Request a Consultation ↗</a>
+      </nav>
     </div>
-
-    <div class="container">
-
-        <!-- Zero Advance Payment Guarantee -->
-        <div class="highlight-banner">
-            <h3><i class="fa-solid fa-shield-halved"></i> 100% Trust Guarantee: NO ADVANCE PAYMENT REQUIRED!</h3>
-            <p>We charge <strong>zero advance payments</strong> until your solar power system is fully installed, commissioned, and operational.</p>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Power your future</span>
+          <h1>Make sunshine work <em>for you.</em></h1>
+          <p>Explore solar energy options for your home or business. Get a clearer picture of the system you may need before speaking with a solar specialist.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#calculator">Estimate My Solar System ↗</a><a class="btn btn-outline" href="#systems">Explore Solar Solutions</a></div>
+          <div class="hero-note"><span class="dot"></span> Practical guidance. Clear estimates. Solutions shaped around your needs.</div>
         </div>
+        <div class="hero-visual" aria-label="Illustration of rooftop solar panels">
+          <div class="sun"></div><div class="panel-scene"><div class="panel-roof"><div class="panels"><i class="panel"></i><i class="panel"></i><i class="panel"></i><i class="panel"></i><i class="panel"></i><i class="panel"></i><i class="panel"></i><i class="panel"></i><i class="panel"></i><i class="panel"></i><i class="panel"></i><i class="panel"></i></div></div><div class="house"></div></div>
+          <div class="floating-stat stat-one"><strong><span class="mini-icon">↗</span>Estimate first</strong><span>Understand your options</span></div>
+          <div class="floating-stat stat-two"><strong>☀ Solar energy</strong><span>Use the power of daylight</span></div>
+        </div>
+      </div>
+    </section>
+    <div class="trustbar"><div class="wrap trust-grid"><div class="trust-item"><b>01</b><span>Solutions for homes and businesses</span></div><div class="trust-item"><b>02</b><span>System options explained clearly</span></div><div class="trust-item"><b>03</b><span>Start with a simple estimate</span></div></div></div>
+    <section id="systems">
+      <div class="wrap"><div class="section-head"><span class="kicker">Solar solutions</span><h2>A system that fits the way you use power.</h2><p>Different properties and energy habits call for different solar configurations. Compare the main options and ask for a site-specific recommendation.</p></div>
+        <div class="systems">
+          <article class="system-card"><div class="system-icon">⌁</div><h3>On-Grid Solar</h3><p>A grid-connected option for properties that use the electricity network. System design and export arrangements depend on local utility requirements.</p><a href="#contact">Discuss on-grid solar <span>↗</span></a></article>
+          <article class="system-card"><div class="system-icon">▣</div><h3>Off-Grid Solar</h3><p>A standalone setup designed around solar generation and battery storage. Sizing depends on your essential loads and the backup time you need.</p><a href="#contact">Discuss off-grid solar <span>↗</span></a></article>
+          <article class="system-card"><div class="system-icon">⟳</div><h3>Hybrid Solar</h3><p>A combined solar and storage approach that may also work with the grid. Backup capability depends on the inverter, battery and selected circuits.</p><a href="#contact">Discuss hybrid solar <span>↗</span></a></article>
+        </div>
+      </div>
+    </section>
 
-        <!-- Solar Systems Explanation -->
-        <section class="card-section">
-            <h2 class="section-title">Our Comprehensive <span>Solar Systems</span></h2>
-            <div class="grid-3">
-                <div class="feature-box">
-                    <i class="fa-solid fa-plug-circle-bolt"></i>
-                    <h3>On-Grid Solar System</h3>
-                    <p>Connects directly to the CEB/LECO national grid via Net Metering / Net Accounting. Ideal for drastically cutting or eliminating monthly electricity bills with high ROI.</p>
-                </div>
-                <div class="feature-box">
-                    <i class="fa-solid fa-battery-full"></i>
-                    <h3>Off-Grid Solar System</h3>
-                    <p>Delivers total independence from the national grid using high-capacity battery storage. Provides continuous 100% self-sustained renewable power.</p>
-                </div>
-                <div class="feature-box">
-                    <i class="fa-solid fa-bolt-lightning"></i>
-                    <h3>Hybrid Solar System</h3>
-                    <p>The ultimate solution combining net-metered grid connectivity with smart lithium battery backups. Ensures zero power cuts during grid blackouts.</p>
-                </div>
+    <section class="packages-section" id="packages">
+      <div class="wrap">
+        <div class="section-head"><span class="kicker">Featured packages</span><h2>Solar packages with published prices.</h2><p>These package details and advertised prices are transcribed from promotional artwork supplied by the company. Final price, equipment availability, site suitability and applicable terms must be confirmed before ordering.</p></div>
+        <div class="package-grid">
+          <article class="package-card"><img src="package-hoymiles-5kw.jpg" alt="Home solar package promotion featuring AE Solar panels, Hoymiles hybrid inverter and battery"><div class="package-body"><span class="kicker">Residential hybrid</span><h3>Hoymiles 5kW + 6kWh Battery</h3><div class="package-price">LKR 1,290,000</div><ul><li>9 × AE Solar 620W panels</li><li>Hoymiles 5kW hybrid inverter</li><li>Hoymiles 6kWh battery</li><li>Installation included as stated in the artwork</li></ul><a class="btn btn-primary" href="#contact">Ask about this package ↗</a></div></article>
+          <article class="package-card"><img src="package-5kw-hybrid.jpg" alt="5kW Deye or Solax hybrid solar package promotional artwork"><div class="package-body"><span class="kicker">Residential hybrid</span><h3>Deye / Solax 5kW Hybrid</h3><div class="package-price">LKR 1,290,000</div><ul><li>5kW hybrid inverter option</li><li>Jinko / JA / TW panels as advertised</li><li>Battery system included; exact configuration to be confirmed</li><li>Promotion advertises two free ceiling fans</li></ul><a class="btn btn-primary" href="#contact">Ask about this package ↗</a></div></article>
+          <article class="package-card"><img src="package-10kw-20kw.jpg" alt="Promotional artwork for 10kW and 20kW three phase hybrid solar packages"><div class="package-body"><span class="kicker">Three-phase hybrid</span><h3>10kW Hybrid Package</h3><div class="package-price">LKR 2,390,000</div><ul><li>10kW three-phase hybrid inverter</li><li>16kWh lithium battery</li><li>12 × 725W Jinko / JA panels</li><li>Suitable for qualifying three-phase homes and commercial sites</li></ul><a class="btn btn-primary" href="#contact">Ask about this package ↗</a></div></article>
+          <article class="package-card"><img src="package-10kw-20kw.jpg" alt="Promotional artwork for 20kW three phase hybrid solar package"><div class="package-body"><span class="kicker">Three-phase hybrid</span><h3>20kW Hybrid Package</h3><div class="package-price">LKR 2,990,000</div><ul><li>20kW three-phase hybrid inverter</li><li>16kWh lithium battery</li><li>22 × 725W Jinko / JA panels</li><li>Designed for larger three-phase properties, subject to site assessment</li></ul><a class="btn btn-primary" href="#contact">Ask about this package ↗</a></div></article>
+        </div>
+        <p class="package-note"><strong>Price notice:</strong> Prices are shown as they appear in the supplied advertisements and may change. Confirm the current quotation, exact equipment models, warranties, utility permissions and installation scope directly with No Power Cut before making a purchase.</p>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="wrap">
+        <div class="section-head"><span class="kicker">Project gallery</span><h2>Real installation photos.</h2><p>A look at solar equipment and panel installations shared by our team. Contact us to discuss a system suitable for your property.</p></div>
+        <div class="project-grid">
+          <article class="project-card"><img src="project-deye-hybrid.jpeg" alt="Installed Deye hybrid inverter, battery and electrical protection equipment" loading="lazy"><div class="project-body"><span class="project-tag">Hybrid system</span><h3>Deye Inverter & Battery Installation</h3><p>Wall-mounted hybrid inverter, battery storage and electrical protection components.</p></div></article>
+          <article class="project-card"><img src="project-inverter-battery.jpeg" alt="Installed inverter and battery system on an indoor wall" loading="lazy"><div class="project-body"><span class="project-tag">Inverter & storage</span><h3>Inverter and Battery Setup</h3><p>Installed inverter and battery equipment, with associated electrical control enclosures.</p></div></article>
+          <article class="project-card"><img src="project-solar-panels.jpeg" alt="Solar panels mounted on a raised metal support structure" loading="lazy"><div class="project-body"><span class="project-tag">Solar panels</span><h3>Solar Panel Mounting Structure</h3><p>Solar modules installed on a raised support structure. System size and location can be added when confirmed.</p></div></article>
+        </div>
+        <p class="project-note"><strong>Project details:</strong> Capacity, location and installation dates have not been provided for these photos, so they are intentionally not guessed. Ask our team for a site-specific recommendation.</p>
+      </div>
+    </section>
+
+    <section class="calculator-section" id="calculator">
+      <div class="wrap calc-layout">
+        <div class="calc-intro"><span class="kicker">Solar estimate tool</span><h2>Start with your electricity bill.</h2><p>Enter a few details to estimate a possible solar system size and its approximate monthly energy generation. This is an initial planning guide—not a final quotation or engineering design.</p>
+          <ul class="calc-points"><li><span class="check">✓</span><span>Estimate a starting system capacity in kW</span></li><li><span class="check">✓</span><span>See a simple monthly generation estimate</span></li><li><span class="check">✓</span><span>Adjust the assumptions for your property</span></li></ul>
+          <div class="notice">Solar output varies with location, shade, roof direction, weather, equipment and system losses. A site survey is needed before making a purchase decision.</div>
+        </div>
+        <div class="calc-card">
+          <h3>Solar System Estimator</h3><p class="subtext">Use your bill and energy details to calculate a preliminary estimate.</p>
+          <form id="solarForm">
+            <div class="field-grid">
+              <div class="field"><label for="bill">Monthly electricity bill (LKR)</label><input id="bill" type="number" min="0" step="100" value="15000" required><span class="input-hint">Your average monthly bill</span></div>
+              <div class="field"><label for="rate">Average electricity cost (LKR/kWh)</label><input id="rate" type="number" min="1" max="1000" step="0.5" value="45" required><span class="input-hint">Use an approximate blended rate</span></div>
+              <div class="field"><label for="sunHours">Estimated solar yield (kWh/kW/month)</label><input id="sunHours" type="number" min="40" max="220" step="5" value="120" required><span class="input-hint">Default planning assumption: 120</span></div>
+              <div class="field"><label for="roof">Available unshaded roof area (m²)</label><input id="roof" type="number" min="0" max="10000" step="1" value="30" required><span class="input-hint">Approximate usable area</span></div>
+              <div class="field full"><label for="systemType">Preferred system type</label><select id="systemType"><option value="On-grid">On-grid — connected to the grid</option><option value="Hybrid">Hybrid — solar with battery option</option><option value="Off-grid">Off-grid — standalone with storage</option><option value="Not sure">Not sure — recommend an option</option></select></div>
+              <div class="field full"><label for="backup">Backup requirement</label><select id="backup"><option value="No backup required">No backup required / daytime use</option><option value="Essential loads">Backup for essential loads</option><option value="Extended backup">Extended backup — needs load assessment</option></select></div>
             </div>
-        </section>
+            <button class="btn btn-primary calc-submit" type="submit">Calculate My Estimate ↗</button>
+          </form>
+          <div class="results" id="results" aria-live="polite">
+            <div class="result-top"><div><small>Suggested starting capacity</small><strong id="capacity">— kW</strong><small id="systemLabel">Preliminary estimate</small></div><span class="pill">Planning estimate</span></div>
+            <div class="result-grid"><div class="result-box"><span>Estimated monthly generation</span><strong id="generation">— kWh</strong></div><div class="result-box"><span>Approx. usable roof area needed*</span><strong id="roofNeeded">— m²</strong></div><div class="result-box"><span>Estimated monthly energy value**</span><strong id="value">LKR —</strong></div><div class="result-box"><span>Estimated monthly usage***</span><strong id="usage">— kWh</strong></div></div>
+            <p class="disclaimer">* Uses a rough planning allowance of 6 m² per kW; actual layout varies. **Gross energy-value illustration only, not guaranteed bill savings. It does not account for tariff blocks, export compensation, self-consumption, financing or utility rules. ***Bill divided by the entered average rate. Battery capacity and backup duration are not calculated.</p>
+            <button class="btn btn-primary calc-submit" type="button" id="requestQuote">Request a detailed assessment ↗</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="why-us">
+      <div class="wrap why-grid">
+        <div class="split-copy"><span class="kicker">Make an informed choice</span><h2>Good solar starts with a good assessment.</h2><p>The right system should be based on your energy use, property, budget and backup expectations—not just a panel count.</p>
+          <div class="feature-list">
+            <div class="feature"><div class="system-icon">⌂</div><div><h3>Understand your energy needs</h3><p>Review electricity usage and identify which loads matter most to you.</p></div></div>
+            <div class="feature"><div class="system-icon">☼</div><div><h3>Consider your roof and sunlight</h3><p>Shading, roof orientation and available space can affect the final system design.</p></div></div>
+            <div class="feature"><div class="system-icon">↗</div><div><h3>Compare a clear proposal</h3><p>Ask for itemised equipment, installation scope, warranty terms and applicable approvals in writing.</p></div></div>
+          </div>
+        </div>
+        <div class="visual-card"><span class="kicker">A smarter energy plan</span><h3>Turn your questions into a clear next step.</h3><div class="energy-circle"><div class="energy-center">☀</div><span class="orbit a">Solar panels</span><span class="orbit b">Your home</span><span class="orbit c">Energy plan</span></div></div>
+      </div>
+    </section>
+    <section id="process" style="background:var(--cream)">
+      <div class="wrap"><div class="section-head"><span class="kicker">How it works</span><h2>From first estimate to informed decision.</h2><p>A simple process to help you explore the right solar setup.</p></div>
+        <div class="steps"><article class="step"><h3>Share your requirements</h3><p>Bring your recent electricity bill, property details and backup needs.</p></article><article class="step"><h3>Arrange an assessment</h3><p>Confirm roof conditions, loads, equipment options and any utility requirements.</p></article><article class="step"><h3>Review your proposal</h3><p>Check the system design, itemised price, expected performance and written terms.</p></article></div>
+      </div>
+    </section>
+    <section class="cta" id="contact"><div class="wrap"><div class="cta-inner"><div><h2>Ready to explore solar for your property?</h2><p>Contact the team to discuss your energy needs and request a site-specific proposal.</p></div><a class="btn btn-primary" id="contactButton" href="#contact-details">Contact the team ↗</a></div></div></section>
+  </main>
+  
+<section id="benefits"><div class="wrap">
+<div class="section-head"><span class="kicker">Experience & support</span><h2>Confidence from consultation to <em>after-sales care</em></h2><p>Company information retained from your existing website.</p></div>
+<div class="systems">
+<article class="system-card"><div class="system-icon">✦</div><h3>13 Years Experience</h3><p>Backed by over 13 years of engineering experience in technical solutions and solar power engineering.</p></article>
+<article class="system-card"><div class="system-icon">↻</div><h3>Warranty Information</h3><p>30-year solar panel warranty and 10-year 1-to-1 replacement warranty for inverter and battery systems, as stated on your current website.</p></article>
+<article class="system-card"><div class="system-icon">✓</div><h3>Zero Advance Payment</h3><p>Your current website states that no advance payment is required until the system is fully installed, commissioned and operational.</p></article>
+<article class="system-card"><div class="system-icon">♡</div><h3>First-Year Insurance</h3><p>Your current website lists first-year free insurance coverage.</p></article>
+<article class="system-card"><div class="system-icon">⚙</div><h3>Free Maintenance Visits</h3><p>Your current website lists three free maintenance and servicing visits during the first five years.</p></article>
+<article class="system-card"><div class="system-icon">◈</div><h3>After-Sales Support</h3><p>Dedicated after-sales care and technical support, as described on your existing website.</p></article>
+</div>
+<div class="notice"><strong>Brands listed on your existing website</strong><br>Inverters & batteries: Deye, Solis, Solax, GoodWe, Sungrow, Sunways, Maxmo.<br>Solar panels: Jinko Solar, JA Solar, AE Solar.</div>
+</div></section>
 
-        <!-- World's Renowned Brands -->
-        <section class="card-section">
-            <h2 class="section-title">World-Renowned <span>Tier-1 Brands</span></h2>
-            <p style="text-align: center; margin-bottom: 1.5rem;">We exclusively install internationally certified, premium-grade solar components from global leaders.</p>
-            
-            <div class="brand-category">
-                <h4>Inverters & Battery Systems</h4>
-                <div class="brand-badges">
-                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Deye</span>
-                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Solis</span>
-                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Solax</span>
-                    <span class="brand-badge"><i class="fa-solid fa-check"></i> GoodWe</span>
-                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Sungrow</span>
-                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Sunways</span>
-                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Maxmo</span>
-                </div>
-            </div>
+<section id="contact"><div class="wrap">
+<div class="section-head"><span class="kicker">Get in touch</span><h2>Let's plan your <em>solar solution</em></h2><p>Contact details retained from your existing website.</p></div>
+<div class="systems">
+<article class="system-card"><div class="system-icon">⌖</div><h3>Head Office — Warakapola</h3><p>No.166, Railway Station Road, Warakapola, Sri Lanka.</p></article>
+<article class="system-card"><div class="system-icon">⌖</div><h3>Kadawatha Branch</h3><p>No.163, Ragama Road, Kadawatha, Sri Lanka.</p></article>
+<article class="system-card"><div class="system-icon">✉</div><h3>Contact</h3><p>Hotline & WhatsApp: <a href="tel:+94711143289">+94 71 114 3289</a><br>Email: <a href="mailto:nopowercut@gmail.com">nopowercut@gmail.com</a></p><p style="margin-top:14px"><a class="btn btn-primary" href="https://wa.me/94711143289" target="_blank" rel="noopener">Chat on WhatsApp ↗</a></p></article>
+</div></div></section>
+<footer id="contact-details">
+    <div class="wrap"><div class="footer-grid">
+      <div class="footer-brand"><a class="brand" href="#home"><span class="brandmark">☼</span><span>NO POWER CUT<small>NO ETC BILL · SOLAR ENERGY</small></span></a><p>On-grid, off-grid and hybrid solar energy solutions for homes and businesses across Sri Lanka.</p></div>
+      <div class="footer-col"><h4>Explore</h4><a href="#systems">Solar Systems</a><a href="#packages">Packages & Prices</a><a href="#projects">Our Projects</a><a href="#calculator">Solar Estimator</a><a href="#why-us">Why Solar</a><a href="#process">How It Works</a></div>
+      <div class="footer-col"><h4>Contact information</h4><p id="contactMessage">Please use the contact details on our current official website until the existing phone numbers and branch details are added to this redesign.</p><div id="contactDetails"></div></div>
+    </div><div class="footer-bottom"><span>© <span id="year"></span> NO POWER CUT, NO ETC BILL. All rights reserved.</span><span>Estimates are indicative and subject to professional assessment.</span></div></div>
+  </footer>
+  <script>
+    const COMPANY = {
+      phoneDisplay: "+94 71 114 3289",
+      phoneLink: "+94711143289",
+      whatsappNumber: "+94711143289",
+      email: "nopowercut@gmail.com",
+      branches: ["Head Office: No. 166, Railway Station Road, Warakapola, Sri Lanka.", "Branch: No. 163, Ragama Road, Kadawatha, Sri Lanka."]
+    };
 
-            <div class="brand-category" style="margin-top: 1.5rem;">
-                <h4>High Efficiency Solar Panels</h4>
-                <div class="brand-badges">
-                    <span class="brand-badge"><i class="fa-solid fa-check"></i> Jinko Solar</span>
-                    <span class="brand-badge"><i class="fa-solid fa-check"></i> JA Solar</span>
-                    <span class="brand-badge"><i class="fa-solid fa-check"></i> AE Solar</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Calculator & Instant Quotation -->
-        <section class="card-section">
-            <h2 class="section-title">Get Instant <span>Solar Quotation</span></h2>
-            <div class="calc-container">
-                
-                <div class="calc-tabs">
-                    <button class="tab-btn active" onclick="switchTab('billTab')">Select by Monthly Bill</button>
-                    <button class="tab-btn" onclick="switchTab('applianceTab')">Select by Appliances</button>
-                </div>
-
-                <!-- Option 1: Monthly Bill -->
-                <div id="billTab" class="calc-content active">
-                    <div class="form-group">
-                        <label for="monthlyBill">Average Monthly Electricity Bill (LKR):</label>
-                        <select id="monthlyBill">
-                            <option value="">-- Choose Monthly Bill Range --</option>
-                            <option value="3kw">Rs. 15,000 - Rs. 35,000 (Approx. 3 kW System)</option>
-                            <option value="5kw">Rs. 35,000 - Rs. 70,000 (Approx. 5 kW System)</option>
-                            <option value="10kw">Rs. 70,000 - Rs. 150,000 (Approx. 10 kW System)</option>
-                            <option value="15kw">Above Rs. 150,000 (Commercial Custom Setup)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Option 2: Appliances -->
-                <div id="applianceTab" class="calc-content">
-                    <p style="font-weight: 600; color: var(--primary-emerald); margin-bottom: 1rem;">Select appliances used at your home or business premises:</p>
-                    <div class="appliance-grid">
-                        <div class="appliance-item">
-                            <label for="appAC">Air Conditioners (12000 BTU):</label>
-                            <input type="number" id="appAC" min="0" value="0">
-                        </div>
-                        <div class="appliance-item">
-                            <label for="appFridge">Refrigerators / Deep Freezers:</label>
-                            <input type="number" id="appFridge" min="0" value="0">
-                        </div>
-                        <div class="appliance-item">
-                            <label for="appPump">Water Pump / Pressure Pump:</label>
-                            <input type="number" id="appPump" min="0" value="0">
-                        </div>
-                        <div class="appliance-item">
-                            <label for="appTV">LED TVs / Computers:</label>
-                            <input type="number" id="appTV" min="0" value="0">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="systemType">Preferred System Type:</label>
-                    <select id="systemType">
-                        <option value="On-Grid">On-Grid System (Net Metering / Accounting)</option>
-                        <option value="Hybrid">Hybrid System (Grid + Battery Outage Backup)</option>
-                        <option value="Off-Grid">Off-Grid System (100% Battery Independent)</option>
-                    </select>
-                </div>
-
-                <button class="btn-calc" onclick="generateQuotation()">Generate Instant Quotation</button>
-
-                <div id="quoteResult" class="quote-result">
-                    <h3>Your Customized Solar Quotation</h3>
-                    <p id="resCapacity"><strong>Recommended Capacity:</strong> -</p>
-                    <p id="resPrice"><strong>Estimated Investment:</strong> -</p>
-                    <div style="margin-top: 0.8rem; font-size: 0.95rem;">
-                        <p><i class="fa-solid fa-shield-check" style="color: var(--accent-gold);"></i> <strong>NO ADVANCE PAYMENT required</strong> until full completion.</p>
-                        <p><i class="fa-solid fa-gift" style="color: var(--accent-gold);"></i> <strong>1st Year FREE Full Insurance Coverage included.</strong></p>
-                        <p><i class="fa-solid fa-wrench" style="color: var(--accent-gold);"></i> <strong>3 FREE Maintenance & Servicing visits</strong> during first 5 years.</p>
-                        <p><i class="fa-solid fa-certificate" style="color: var(--accent-gold);"></i> <strong>10 Years 1 to 1 Replacement Warranty</strong> for Inverter & Battery.</p>
-                    </div>
-                    <div style="text-align: center; margin-top: 1.5rem;">
-                        <a id="waQuoteLink" href="#" class="btn-whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i> Send Quotation to WhatsApp for Inspection</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Trust, Warranty & After-Sales Benefits -->
-        <section class="card-section">
-            <h2 class="section-title">Why Choose <span>Our Company?</span></h2>
-            <div class="grid-3">
-                <div class="feature-box">
-                    <i class="fa-solid fa-award"></i>
-                    <h3>13 Years Experience</h3>
-                    <p>Backed by over 13 years of engineering experience in technical solutions and solar power engineering.</p>
-                </div>
-                <div class="feature-box">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h3>1st Year Free Insurance</h3>
-                    <p>Enjoy complete financial protection with <strong>100% FREE Insurance Coverage</strong> for your system during the first year.</p>
-                </div>
-                <div class="feature-box">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    <h3>5-Year Free Maintenance</h3>
-                    <p>Includes <strong>3 FREE comprehensive servicing and preventive maintenance visits</strong> within the first 5 years.</p>
-                </div>
-                <div class="feature-box">
-                    <i class="fa-solid fa-rotate"></i>
-                    <h3>1 to 1 Replacement Warranty</h3>
-                    <p><strong>10-Year 1 to 1 Replacement Warranty</strong> for Inverter & Battery systems + 30-Year Solar Panel Warranty.</p>
-                </div>
-                <div class="feature-box">
-                    <i class="fa-solid fa-handshake"></i>
-                    <h3>Zero Advance Payment</h3>
-                    <p>No upfront deposit or advance payment required. Settle payments only after successful installation and testing.</p>
-                </div>
-                <div class="feature-box">
-                    <i class="fa-solid fa-headset"></i>
-                    <h3>Dedicated After-Sales Care</h3>
-                    <p>Lifetime customer support and technical backup team ensuring high system uptime and maximum power output.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Branch Network & Contact Details -->
-        <section class="card-section">
-            <h2 class="section-title">Contact <span>Branch Network</span></h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <h4>Head Office (Warakapola)</h4>
-                        <p>No.166, Railway Station Road, Warakapola, Sri Lanka.</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <h4>Kadawatha Branch</h4>
-                        <p>No.163, Ragama Road, Kadawatha, Sri Lanka.</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <h4>Direct Hotline & WhatsApp</h4>
-                        <p>+94 71 114 3289</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <div>
-                        <h4>Email Address</h4>
-                        <p>nopowercut@gmail.com</p>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="https://wa.me/+94711143289" class="btn-whatsapp" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp (+94 71 114 3289)
-                </a>
-                <a href="tel:+94711143289" class="btn-call">
-                    <i class="fa-solid fa-phone"></i> Direct Call (+94 71 114 3289)
-                </a>
-            </div>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Solar Energy Solutions. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        var activeTabMode = "bill";
-
-        function switchTab(tabId) {
-            document.querySelectorAll('.calc-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-            
-            document.getElementById(tabId).classList.add('active');
-            event.target.classList.add('active');
-
-            activeTabMode = (tabId === "billTab") ? "bill" : "appliance";
-        }
-
-        function generateQuotation() {
-            var sysType = document.getElementById("systemType").value;
-            var capText = "";
-            var priceText = "";
-
-            if (activeTabMode === "bill") {
-                var bill = document.getElementById("monthlyBill").value;
-                if (!bill) {
-                    alert("Please select a monthly bill range.");
-                    return;
-                }
-                if (bill === "3kw") {
-                    capText = "3 kW System (~360-400 Units/month)";
-                    priceText = (sysType === "Hybrid") ? "LKR 1,250,000 - 1,450,000" : "LKR 850,000 - 980,000";
-                } else if (bill === "5kw") {
-                    capText = "5 kW System (~600-680 Units/month)";
-                    priceText = (sysType === "Hybrid") ? "LKR 1,650,000 - 1,950,000" : "LKR 1,350,000 - 1,500,000";
-                } else if (bill === "10kw") {
-                    capText = "10 kW System (~1,200+ Units/month)";
-                    priceText = (sysType === "Hybrid") ? "LKR 3,400,000 - 3,900,000" : "LKR 2,750,000 - 3,200,000";
-                } else {
-                    capText = "15+ kW Commercial System";
-                    priceText = "Custom quotation based on site inspection";
-                }
-            } else {
-                var ac = parseInt(document.getElementById("appAC").value) || 0;
-                var fridge = parseInt(document.getElementById("appFridge").value) || 0;
-                var pump = parseInt(document.getElementById("appPump").value) || 0;
-                var tv = parseInt(document.getElementById("appTV").value) || 0;
-
-                var estimatedkW = (ac * 1.5) + (fridge * 0.5) + (pump * 1.0) + (tv * 0.2);
-                if (estimatedkW <= 0) {
-                    alert("Please enter at least 1 appliance quantity.");
-                    return;
-                }
-
-                if (estimatedkW <= 3.5) {
-                    capText = "3 kW System (Based on selected appliances)";
-                    priceText = (sysType === "Hybrid") ? "LKR 1,250,000 - 1,450,000" : "LKR 850,000 - 980,000";
-                } else if (estimatedkW <= 6.5) {
-                    capText = "5 kW System (Based on selected appliances)";
-                    priceText = (sysType === "Hybrid") ? "LKR 1,650,000 - 1,950,000" : "LKR 1,350,000 - 1,500,000";
-                } else {
-                    capText = "10 kW System (Based on selected appliances)";
-                    priceText = (sysType === "Hybrid") ? "LKR 3,400,000 - 3,900,000" : "LKR 2,750,000 - 3,200,000";
-                }
-            }
-
-            document.getElementById("resCapacity").innerHTML = "<strong>Recommended Capacity:</strong> " + capText + " (" + sysType + ")";
-            document.getElementById("resPrice").innerHTML = "<strong>Estimated Investment:</strong> " + priceText;
-
-            var waMsg = "Hello, I created a quotation on your website:%0A- System: " + capText + "%0A- System Type: " + sysType + "%0A- Estimated Investment: " + priceText + "%0A- Included: Zero Advance Payment, 1st Year Free Insurance, 3 Free Servicing Visits, 10 Years Replacement Warranty.%0APlease contact me for a site visit.";
-            document.getElementById("waQuoteLink").href = "https://wa.me/+94711143289?text=" + waMsg;
-
-            document.getElementById("quoteResult").style.display = "block";
-        }
-    </script>
-
+    const $ = (id) => document.getElementById(id);
+    $("year").textContent = new Date().getFullYear();
+    $("menuBtn").addEventListener("click", () => {
+      const nav = $("navLinks"), open = nav.classList.toggle("open");
+      $("menuBtn").setAttribute("aria-expanded", String(open));
+    });
+    document.querySelectorAll("#navLinks a").forEach(a => a.addEventListener("click", () => {
+      $("navLinks").classList.remove("open"); $("menuBtn").setAttribute("aria-expanded","false");
+    }));
+    function formatNumber(n, digits=1){ return new Intl.NumberFormat("en-LK",{maximumFractionDigits:digits}).format(n); }
+    function money(n){ return "LKR " + new Intl.NumberFormat("en-LK",{maximumFractionDigits:0}).format(n); }
+    let latestEstimate = null;
+    $("solarForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const bill = Number($("bill").value), rate = Number($("rate").value);
+      const yieldPerKw = Number($("sunHours").value), roof = Number($("roof").value);
+      const type = $("systemType").value, backup = $("backup").value;
+      if (![bill,rate,yieldPerKw,roof].every(Number.isFinite) || bill < 0 || rate <= 0 || yieldPerKw <= 0 || roof < 0) {
+        alert("Please enter valid non-negative values and a positive electricity rate."); return;
+      }
+      const monthlyUsage = bill / rate;
+      const energyBasedKw = monthlyUsage / yieldPerKw;
+      const roofLimitedKw = roof / 6;
+      const capacity = Math.max(0, Math.min(energyBasedKw, roofLimitedKw));
+      const generation = capacity * yieldPerKw;
+      const energyValue = generation * rate;
+      latestEstimate = {bill,rate,yieldPerKw,roof,type,backup,monthlyUsage,capacity,generation,energyValue};
+      $("capacity").textContent = formatNumber(capacity,2) + " kW";
+      $("generation").textContent = formatNumber(generation,0) + " kWh";
+      $("roofNeeded").textContent = formatNumber(capacity*6,1) + " m²";
+      $("value").textContent = money(energyValue);
+      $("usage").textContent = formatNumber(monthlyUsage,0) + " kWh";
+      $("systemLabel").textContent = type + " · " + backup;
+      $("results").classList.add("show");
+      $("results").scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest"});
+    });
+    function buildContactMessage(){
+      if(!latestEstimate) return "Hello, I would like to request a solar consultation.";
+      return `Hello, I would like a detailed solar assessment. Preliminary estimate: ${formatNumber(latestEstimate.capacity,2)} kW; system preference: ${latestEstimate.type}; backup requirement: ${latestEstimate.backup}. Monthly bill: LKR ${formatNumber(latestEstimate.bill,0)}. Please confirm the suitable system, price and terms.`;
+    }
+    $("requestQuote").addEventListener("click", () => {
+      const message = buildContactMessage();
+      if(COMPANY.whatsappNumber){
+        window.open("https://wa.me/"+COMPANY.whatsappNumber.replace(/\D/g,"")+"?text="+encodeURIComponent(message),"_blank","noopener");
+      } else if(COMPANY.email){
+        window.location.href = "mailto:"+COMPANY.email+"?subject="+encodeURIComponent("Solar system assessment request")+"&body="+encodeURIComponent(message);
+      } else {
+        alert("Please add the company's existing WhatsApp number or email in the COMPANY settings in index.html before publishing. Your estimate is ready to discuss.");
+      }
+    });
+    const contactDetails = $("contactDetails");
+    if(COMPANY.phoneDisplay && COMPANY.phoneLink){
+      const a=document.createElement("a");a.href="tel:"+COMPANY.phoneLink.replace(/[^\d+]/g,"");a.textContent=COMPANY.phoneDisplay;contactDetails.appendChild(a);
+      $("contactMessage").textContent="Speak with our team about a solar assessment.";
+    }
+    if(COMPANY.email){const a=document.createElement("a");a.href="mailto:"+COMPANY.email;a.textContent=COMPANY.email;contactDetails.appendChild(a);}
+    if(COMPANY.branches.length){
+      COMPANY.branches.forEach(branch=>{const p=document.createElement("p");p.textContent=branch;contactDetails.appendChild(p);});
+      $("contactMessage").textContent="Contact the team or visit a branch.";
+    }
+    if(COMPANY.whatsappNumber){
+      const a=document.createElement("a");a.href="https://wa.me/"+COMPANY.whatsappNumber.replace(/\D/g,"");a.target="_blank";a.rel="noopener";a.textContent="Chat on WhatsApp";contactDetails.appendChild(a);
+      $("contactButton").href=a.href;$("contactButton").target="_blank";$("contactButton").rel="noopener";
+    } else {
+      $("contactButton").href="#contact-details";
+    }
+  </script>
 </body>
 </html>
